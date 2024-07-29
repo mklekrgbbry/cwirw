@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-display0-family: var(--text-family-brand);
+  --text-display0-size: 2.25rem;
+  --text-display0-line-height: 2.8125rem;
+  --text-display0-weight: 700;
+  --text-display0-letter-spacing: -0.4px;
+  --text-display0-text-transform: none;
+  --text-display1-family: var(--text-family-brand);
+  --text-display1-size: clamp(2rem, calc(1.82143rem + 0.89286vw), 2.25rem);
+  --text-display1-line-height: clamp(
+    2.5rem,
+    calc(2.27679rem + 1.11607vw),
+    2.8125rem
+  );
+  --text-display1-weight: 700;
+  --text-display1-letter-spacing: -0.4px;
+  --text-display1-text-transform: none;
+  --text-display2-family: var(--text-family-brand);
+  --text-display2-size: clamp(1.75rem, calc(1.57143rem + 0.89286vw), 2rem);
+  --text-display2-line-height: clamp(
+    2.1875rem,
+    calc(1.96429rem + 1.11607vw),
+    2.5rem
+  );
+  --text-display2-weight: 700;
+  --text-display2-letter-spacing: -0.4px;
+  --text-display2-text-transform: none;
+  --text-headline1-family: var(--text-family-brand);
+  --text-headline1-size: 1.5rem;
+  --text-headline1-line-height: 2rem;
+  --text-headline1-weight: 700;
+  --text-headline1-letter-spacing: -0.2px;
+  --text-headline1-text-transform: none;
+  --text-headline2-family: var(--text-family-brand);
+  --text-headline2-size: 1.25rem;
+  --text-headline2-line-height: 1.5rem;
+  --text-headline2-weight: 700;
+  --text-headline2-letter-spacing: -0.2px;
+  --text-headline2-text-transform: none;
+  --text-headline3-family: var(--text-family-brand);
+  --text-headline3-size: 1rem;
+  --text-headline3-line-height: 1.5rem;
+  --text-headline3-weight: 700;
+  --text-headline3-letter-spacing: 0px;
+  --text-headline3-text-transform: none;
+  --text-body0-family: var(--text-family-default);
+  --text-body0-size: 1rem;
+  --text-body0-line-height: 1.5rem;
+  --text-body0-weight: 400;
+  --text-body0-letter-spacing: 0px;
+  --text-body0-text-transform: none;
+  --text-body1-family: var(--text-family-default);
+  --text-body1-size: 1rem;
+  --text-body1-line-height: 1.5;
+  --text-body1-weight: 400;
+  --text-body1-letter-spacing: 0px;
+  --text-body1-text-transform: none;
+  --text-body2-family: var(--text-family-default);
+  --text-body2-size: 0.875rem;
+  --text-body2-line-height: 1.5;
+  --text-body2-weight: 400;
+  --text-body2-letter-spacing: 0px;
+  --text-body2-text-transform: none;
+  --text-body3-family: var(--text-family-default);
+  --text-body3-size: 0.875rem;
+  --text-body3-line-height: 1.5;
+  --text-body3-weight: 400;
+  --text-body3-letter-spacing: 0px;
+  --text-body3-text-transform: none;
+  --text-body4-family: var(--text-family-default);
+  --text-body4-size: 0.875rem;
+  --text-body4-line-height: 1.5;
+  --text-body4-weight: 400;
+  --text-body4-letter-spacing: 0px;
+  --text-body4-text-transform: none;
+  --text-button1-family: var(--text-family-brand);
+  --text-button1-size: 1rem;
+  --text-button1-line-height: 1.5;
+  --text-button1-weight: 700;
+  --text-button1-letter-spacing: 0px;
+  --text-button1-text-transform: none;
+  --text-button2-family: var(--text-family-brand);
+  --text-button2-size: 0.875rem;
+  --text-button2-line-height: 1.71429;
+  --text-button2-weight: 700;
+  --text-button2-letter-spacing: 0px;
+  --text-button2-text-transform: none;
+  --text-callout1-family: var(--text-family-default);
+  --text-callout1-size: 0.875rem;
+  --text-callout1-line-height: 1.5;
+  --text-callout1-weight: 400;
+  --text-callout1-letter-spacing: 1px;
+  --text-callout1-text-transform: uppercase;
+  --text-callout2-family: var(--text-family-default);
+  --text-callout2-size: 0.75rem;
+  --text-callout2-line-height: 1.33333;
+  --text-callout2-weight: 400;
+  --text-callout2-letter-spacing: 1px;
+  --text-callout2-text-transform: uppercase;
+  --text-caption-family: var(--text-family-default);
+  --text-caption-size: 0.75rem;
+  --text-caption-line-height: 1.33333;
+  --text-caption-weight: 400;
+  --text-caption-letter-spacing: 0px;
+  --text-caption-text-transform: none;
+  --text-tag-family: var(--text-family-default);
+  --text-tag-size: 0.625rem;
+  --text-tag-line-height: 1.2;
+  --text-tag-weight: 500;
+  --text-tag-letter-spacing: 0px;
+  --text-tag-text-transform: none;
+  --text-family-brand: "Xfinity Brown", DMSans, Helvetica, sans-serif;
+  --icon-offset-x: 0.75rem;
+  --icon-offset-y: 0%;
+  --input-margin-top: 1rem;
+  --input-margin-bottom: 1rem;
+  --text-align: left;
+  --input-padding-minimal: var(--space-asym-1, calc(0.75rem - 1px) 0 0.5rem 0);
+  --input-padding-contained: var(--space-sym-1, calc(1rem - 1px));
+  --error-color: rgb(180, 0, 0);
+}
+
+body {
+  font-family: "Xfinity Brown";
+}
+
+.xc-text-body2 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.bg-xfinity-logo {
+  background-image: url(./static/images/xfinity-logo-grey.svg);
+}
+
+.sc-prism-input-text {
+  --tw-bg-opacity: 1;
+  --shadow-color: var(--material-neutral2-base-shadow);
+  background-color: rgb(246, 246, 249);
+  border-color: rgb(98, 98, 108);
+  border-radius: var(--border-radius-small, 4px);
+  border-width: 1px;
+  /* padding: var(--input-padding-contained); */
+}
+
+#desktop-ad-block {
+  background-image: url("https://assets.xfinity.com/assets/cima/login/default/ad/olympics_2024_symphony_desktop.png");
+  /* background-image: url("./static/images/xfinity-mobile-save-desktop.jpg"); */
+  background-position: top;
+  height: 640px;
+  width: 300px;
+  width: 100%;
+  background-position-x: 50%;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.error {
+  outline: 1px solid rgb(180, 0, 0);
+  outline-color: rgb(180, 0, 0);
+  border-color: rgb(180, 0, 0);
+}
+
+.error:focus {
+  outline-color: rgb(180, 0, 0) !important;
+}
+
+.error-message {
+  color: rgb(180, 0, 0);
+  font-size: 0.75rem;
+  display: block;
+}
+
+.error-message-wrapper {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+#remember-me {
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  font-variation-settings: normal;
+  tab-size: 4;
+  cursor: pointer;
+  line-height: inherit;
+  color: rgb(var(--text-color-neutral-base));
+  visibility: inherit;
+  border: 0 solid;
+  box-sizing: border-box;
+  column-gap: 1rem;
+  display: grid;
+  grid-template-areas: "checkbox label" "checkbox hint";
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 1fr;
+}
+
+.off-screen {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}

